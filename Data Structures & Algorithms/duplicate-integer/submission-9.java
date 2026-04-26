@@ -1,0 +1,17 @@
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+        Map<Integer,Integer> mp=new HashMap<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            if(mp.containsKey(nums[i]))
+            {
+                System.out.println(mp.get(nums[i]));
+                return true;
+            }
+
+            
+            mp.put(nums[i],0);
+        }
+        return false;
+    }
+}
